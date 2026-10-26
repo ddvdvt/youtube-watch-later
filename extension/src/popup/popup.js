@@ -25,9 +25,31 @@ function paint(queue) {
   /** @type {HTMLButtonElement} */ ($('qClear')).disabled = !queue.items.length;
 }
 
+/**
+ * Access to youtube.com. Chrome grants it at install; in Firefox (MV3) the user can withhold or
+ * revoke it, and then no content script runs there. Shown with a button that asks again.
+ */
+const YT = { origins: chrome.runtime.getManifest().host_permissions || [] };
+async function renderAccess() {
+  const ok = await chrome.permissions.contains(YT).catch(() => true);
+  $('access').classList.toggle('hidden', ok);
+}
+
 async function init() {
   applyI18n();
   wireBrandLinks();
+  $('grantAccess').addEventListener('click', async () => {
+    // straight from the click: permissions.request needs the user gesture
+    const granted = await chrome.permissions.request(YT).catch(() => false);
+    if (!granted) {
+      $('accessMsg').textContent = t('accessDenied');
+      return;
+    }
+    await renderAccess();
+    const tab = await targetTab();
+    if (isYoutube(tab) && tab.id != null) chrome.tabs.reload(tab.id).catch(() => {});
+  });
+  await renderAccess();
   const tab = await targetTab();
   const { queue } = await chrome.storage.local.get('queue');
   paint(normalizeQueue(queue));

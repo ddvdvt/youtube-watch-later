@@ -45,6 +45,12 @@ const M = {
   ],
   shortcutIs: ['Следующее из очереди: $1', 'Next from the queue: $1'],
   shortcutNone: ['Сочетание клавиш не назначено', 'No keyboard shortcut set'],
+  noAccess: [
+    'У расширения нет доступа к youtube.com (в Firefox его можно выдать или отозвать). Без доступа не работают кнопки на превью, очередь на странице видео и чистка списка.',
+    'The extension has no access to youtube.com (in Firefox this access can be granted or revoked). Without it the thumbnail buttons, the queue on the video page and the list cleanup do not work.',
+  ],
+  grantAccess: ['Разрешить доступ к YouTube', 'Allow access to YouTube'],
+  accessDenied: ['Доступ не выдан.', 'Access was not granted.'],
   wlSection: ['Смотреть позже', 'Watch Later'],
   popupWlText: ['Загрузить весь список, отфильтровать и удалить лишнее — с резервной копией.', 'Load the whole list, filter it and remove what you no longer need — with a backup.'],
   openWl: ['Открыть чистку списка', 'Open list cleanup'],

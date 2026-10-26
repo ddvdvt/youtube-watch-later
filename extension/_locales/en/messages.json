@@ -89,6 +89,15 @@
   "shortcutNone": {
     "message": "No keyboard shortcut set"
   },
+  "noAccess": {
+    "message": "The extension has no access to youtube.com (in Firefox this access can be granted or revoked). Without it the thumbnail buttons, the queue on the video page and the list cleanup do not work."
+  },
+  "grantAccess": {
+    "message": "Allow access to YouTube"
+  },
+  "accessDenied": {
+    "message": "Access was not granted."
+  },
   "wlSection": {
     "message": "Watch Later"
   },

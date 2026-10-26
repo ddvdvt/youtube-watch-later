@@ -14,6 +14,12 @@
   </header>
 
   <main>
+    <section id="access" class="card hidden" role="alert">
+      <p data-i18n="noAccess">У расширения нет доступа к youtube.com.</p>
+      <button type="button" id="grantAccess" class="btn small primary" data-i18n="grantAccess">Разрешить доступ к YouTube</button>
+      <p id="accessMsg" class="muted"></p>
+    </section>
+
     <section aria-labelledby="qTitle">
       <div class="row">
         <h2 class="section-title" id="qTitle"><span data-i18n="queueTitle">Очередь</span> <span id="qCount" class="badge">0</span></h2>

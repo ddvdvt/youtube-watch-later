@@ -108,7 +108,10 @@ async function init() {
   }
   $('shortcuts').addEventListener('click', (e) => {
     e.preventDefault();
-    chrome.tabs.create({ url: 'chrome://extensions/shortcuts' });
+    // Firefox: about:addons → Manage Extension Shortcuts (extensions cannot open about: pages directly)
+    const commands = /** @type {any} */ (chrome.commands);
+    if (typeof commands.openShortcutSettings === 'function') commands.openShortcutSettings();
+    else chrome.tabs.create({ url: 'chrome://extensions/shortcuts' });
   });
   document.body.dataset.ready = '1';
 }

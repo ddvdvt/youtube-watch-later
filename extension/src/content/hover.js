@@ -15,6 +15,8 @@ const CSS = `
 `;
 
 const ICON_NEXT = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5v14l9-7zM16 5h3v14h-3z"/></svg>';
+/** An icon as a DOM node (parsed in an inert document, no innerHTML on the page). @param {string} markup */
+const icon = (markup) => /** @type {Element} */ (new DOMParser().parseFromString(markup, 'text/html').body.firstElementChild);
 const ICON_ADD = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h12v2H3zm0 5h12v2H3zm0 5h8v2H3zm14-3V9h2v4h4v2h-4v4h-2v-4h-4v-2z"/></svg>';
 
 /** @type {{ bar: HTMLElement | null, anchor: HTMLAnchorElement | null, hideTimer: any, enabled: boolean, seen: number }} */
@@ -62,10 +64,10 @@ function bar() {
   const { root } = shadowHost('ywl-hover', CSS);
   const b = el('div', { class: 'bar hidden', role: 'toolbar', 'aria-label': t('queueTitle') });
   const next = el('button', { type: 'button', 'data-act': 'next', title: t('playNextHint'), 'aria-label': t('playNext') });
-  next.innerHTML = ICON_NEXT;
+  next.append(icon(ICON_NEXT));
   next.append(el('span', { class: 'lbl', text: t('hoverNext') }));
   const end = el('button', { type: 'button', 'data-act': 'end', title: t('addToQueueHint'), 'aria-label': t('addToQueue') });
-  end.innerHTML = ICON_ADD;
+  end.append(icon(ICON_ADD));
   end.append(el('span', { class: 'lbl', text: t('hoverEnd') }));
   b.append(next, end);
   b.addEventListener('click', (e) => {
