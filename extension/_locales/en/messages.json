@@ -17,8 +17,14 @@
   "playNext": {
     "message": "Play next"
   },
+  "hoverNext": {
+    "message": "Next"
+  },
+  "hoverEnd": {
+    "message": "Queue"
+  },
   "playNextHint": {
-    "message": "Put first in the queue"
+    "message": "Play next: put first in the queue"
   },
   "addToQueue": {
     "message": "Add to queue"

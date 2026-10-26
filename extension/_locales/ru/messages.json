@@ -17,14 +17,20 @@
   "playNext": {
     "message": "Воспроизвести далее"
   },
+  "hoverNext": {
+    "message": "Далее"
+  },
+  "hoverEnd": {
+    "message": "В очередь"
+  },
   "playNextHint": {
-    "message": "Поставить первым в очередь"
+    "message": "Воспроизвести далее: поставить первым в очередь"
   },
   "addToQueue": {
     "message": "В конец очереди"
   },
   "addToQueueHint": {
-    "message": "Добавить в конец очереди"
+    "message": "В конец очереди"
   },
   "toastNext": {
     "message": "«$1» — воспроизведётся следующим"

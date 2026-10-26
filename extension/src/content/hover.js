@@ -9,7 +9,9 @@ const CSS = `
 .bar{position:fixed;z-index:2147483000;display:flex;gap:4px;padding:3px;border-radius:16px;background:rgba(15,15,15,.78);backdrop-filter:blur(4px)}
 .bar button{display:inline-flex;align-items:center;gap:4px;height:26px;padding:0 9px;border:0;border-radius:13px;background:transparent;color:#fff;font:500 12.5px/1 Roboto,"Segoe UI",Arial,sans-serif}
 .bar button:hover,.bar button:focus-visible{background:rgba(255,255,255,.22)}
-.bar svg{width:14px;height:14px;fill:currentColor}
+.bar svg{width:14px;height:14px;fill:currentColor;flex:none}
+.bar.compact button{padding:0 7px}
+.bar.compact .lbl{display:none}
 `;
 
 const ICON_NEXT = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5v14l9-7zM16 5h3v14h-3z"/></svg>';
@@ -59,12 +61,12 @@ function bar() {
   if (H.bar && H.bar.isConnected) return H.bar;
   const { root } = shadowHost('ywl-hover', CSS);
   const b = el('div', { class: 'bar hidden', role: 'toolbar', 'aria-label': t('queueTitle') });
-  const next = el('button', { type: 'button', 'data-act': 'next', title: t('playNextHint') });
+  const next = el('button', { type: 'button', 'data-act': 'next', title: t('playNextHint'), 'aria-label': t('playNext') });
   next.innerHTML = ICON_NEXT;
-  next.append(t('playNext'));
-  const end = el('button', { type: 'button', 'data-act': 'end', title: t('addToQueueHint') });
+  next.append(el('span', { class: 'lbl', text: t('hoverNext') }));
+  const end = el('button', { type: 'button', 'data-act': 'end', title: t('addToQueueHint'), 'aria-label': t('addToQueue') });
   end.innerHTML = ICON_ADD;
-  end.append(t('addToQueue'));
+  end.append(el('span', { class: 'lbl', text: t('hoverEnd') }));
   b.append(next, end);
   b.addEventListener('click', (e) => {
     const btn = /** @type {HTMLElement} */ (e.target).closest('button');
@@ -102,7 +104,10 @@ function show(a) {
   const r = a.getBoundingClientRect();
   b.style.left = `${Math.round(r.left + 6)}px`;
   b.style.top = `${Math.round(r.top + 6)}px`;
+  // small thumbnails (sidebar, playlists): icons only, the labels stay as tooltips and aria-labels
+  b.classList.remove('compact');
   b.classList.remove('hidden');
+  if (b.offsetWidth > r.width - 12) b.classList.add('compact');
   H.seen = Date.now();
 }
 

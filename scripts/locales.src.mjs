@@ -16,9 +16,11 @@ const M = {
 
   // hover buttons, toasts, context menu
   playNext: ['Воспроизвести далее', 'Play next'],
-  playNextHint: ['Поставить первым в очередь', 'Put first in the queue'],
+  hoverNext: ['Далее', 'Next'],
+  hoverEnd: ['В очередь', 'Queue'],
+  playNextHint: ['Воспроизвести далее: поставить первым в очередь', 'Play next: put first in the queue'],
   addToQueue: ['В конец очереди', 'Add to queue'],
-  addToQueueHint: ['Добавить в конец очереди', 'Add to the end of the queue'],
+  addToQueueHint: ['В конец очереди', 'Add to the end of the queue'],
   toastNext: ['«$1» — воспроизведётся следующим', '"$1" will play next'],
   toastEnd: ['«$1» — в конце очереди (всего $2)', '"$1" added to the queue ($2 in total)'],
   queueError: ['Не удалось изменить очередь. Обновите страницу.', 'Could not change the queue. Reload the page.'],
