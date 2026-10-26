@@ -1,0 +1,545 @@
+{
+  "extName": {
+    "message": "Watch Later Cleaner & Play Next Queue"
+  },
+  "extShortName": {
+    "message": "Later Queue"
+  },
+  "extDescription": {
+    "message": "Clean up a huge YouTube Watch Later list with filters and a backup first. Adds \"Play next\" and a queue of your own."
+  },
+  "actionTitle": {
+    "message": "Watch Later cleaner & queue"
+  },
+  "cmdNext": {
+    "message": "Next video from the queue"
+  },
+  "playNext": {
+    "message": "Play next"
+  },
+  "playNextHint": {
+    "message": "Put first in the queue"
+  },
+  "addToQueue": {
+    "message": "Add to queue"
+  },
+  "addToQueueHint": {
+    "message": "Add to the end of the queue"
+  },
+  "toastNext": {
+    "message": "\"$1\" will play next"
+  },
+  "toastEnd": {
+    "message": "\"$1\" added to the queue ($2 in total)"
+  },
+  "queueError": {
+    "message": "Could not change the queue. Reload the page."
+  },
+  "queueEmpty": {
+    "message": "The queue is empty"
+  },
+  "queueTitle": {
+    "message": "Queue"
+  },
+  "nextNow": {
+    "message": "Next ▶"
+  },
+  "show": {
+    "message": "Show"
+  },
+  "hide": {
+    "message": "Collapse"
+  },
+  "moveUp": {
+    "message": "Move up"
+  },
+  "moveDown": {
+    "message": "Move down"
+  },
+  "remove": {
+    "message": "Remove"
+  },
+  "clear": {
+    "message": "Clear"
+  },
+  "clearConfirm": {
+    "message": "Clear the queue ($1)?"
+  },
+  "nowFromQueue": {
+    "message": "Now from the queue: $1"
+  },
+  "autoAdvanceOn": {
+    "message": "next plays when this one ends"
+  },
+  "autoAdvanceOff": {
+    "message": "auto-advance is off"
+  },
+  "popupQueueEmpty": {
+    "message": "The queue is empty. Hover a video thumbnail on YouTube and click \"Play next\" or \"Add to queue\" — or right-click a video link."
+  },
+  "shortcutIs": {
+    "message": "Next from the queue: $1"
+  },
+  "shortcutNone": {
+    "message": "No keyboard shortcut set"
+  },
+  "wlSection": {
+    "message": "Watch Later"
+  },
+  "popupWlText": {
+    "message": "Load the whole list, filter it and remove what you no longer need — with a backup."
+  },
+  "openWl": {
+    "message": "Open list cleanup"
+  },
+  "popupJob": {
+    "message": "Removal: $1, $2 of $3"
+  },
+  "jobStatus_running": {
+    "message": "running"
+  },
+  "jobStatus_paused": {
+    "message": "paused"
+  },
+  "jobStatus_done": {
+    "message": "done"
+  },
+  "jobStatus_cancelled": {
+    "message": "cancelled"
+  },
+  "jobStatus_error": {
+    "message": "stopped"
+  },
+  "settings": {
+    "message": "Settings"
+  },
+  "otherExtensions": {
+    "message": "Author's other extensions"
+  },
+  "launch": {
+    "message": "Clean up Watch Later"
+  },
+  "launchResume": {
+    "message": "Continue removal"
+  },
+  "panelTitle": {
+    "message": "Watch Later cleanup"
+  },
+  "panelFoot": {
+    "message": "Everything runs in your browser. Requests go only to YouTube — the same ones the page itself makes."
+  },
+  "close": {
+    "message": "Close"
+  },
+  "introText": {
+    "message": "The extension loads the whole list (YouTube shows 100 videos at a time), shows how many are watched, unavailable or Shorts, and lets you choose what to remove. A backup is downloaded before anything is removed."
+  },
+  "builtinNote": {
+    "message": "YouTube has its own \"Remove watched videos\" item (the list's ⋮ menu) — it removes all watched videos at once. Here you can pick the watched threshold, unavailable videos, channels, duration, and preview the list first."
+  },
+  "loadAll": {
+    "message": "Load the whole list"
+  },
+  "loadingN": {
+    "message": "Loaded $1…"
+  },
+  "loadingOf": {
+    "message": "Loaded $1 of ~$2…"
+  },
+  "stopLoading": {
+    "message": "Stop loading"
+  },
+  "loadStopped": {
+    "message": "Loading stopped: only the first $1 videos are below."
+  },
+  "loadPartial": {
+    "message": "Not all videos were loaded ($1, error $2). Filters apply to the loaded ones only."
+  },
+  "err_noContext": {
+    "message": "The YouTube page is not ready yet. Wait a few seconds and try again."
+  },
+  "err_notLoggedIn": {
+    "message": "Sign in to YouTube: the Watch Later list exists only when you are signed in."
+  },
+  "err_loadHttp": {
+    "message": "YouTube did not return the list (error $1). Reload the page and try again."
+  },
+  "err_format": {
+    "message": "YouTube seems to have changed the list format and the extension cannot read it. Nothing was removed. Please update the extension."
+  },
+  "listEmpty": {
+    "message": "The list is empty."
+  },
+  "nothingSelected": {
+    "message": "Nothing is selected."
+  },
+  "hiddenHint": {
+    "message": "The YouTube header says $1 videos, $2 were loaded — YouTube may hide some unavailable ones."
+  },
+  "chipTotal": {
+    "message": "total"
+  },
+  "chipWatched": {
+    "message": "watched ≥$1%"
+  },
+  "chipUnavailable": {
+    "message": "unavailable"
+  },
+  "chipHours": {
+    "message": "h in total"
+  },
+  "filtersTitle": {
+    "message": "What to remove"
+  },
+  "f_watched": {
+    "message": "Watched: at least"
+  },
+  "f_watchedPct": {
+    "message": "Watched threshold, %"
+  },
+  "f_unavailable": {
+    "message": "Unavailable: deleted, private ($1)"
+  },
+  "f_shorts": {
+    "message": "Shorts ($1)"
+  },
+  "f_channels": {
+    "message": "Channels"
+  },
+  "channelSearch": {
+    "message": "Find a channel"
+  },
+  "noChannel": {
+    "message": "(no channel)"
+  },
+  "noChannels": {
+    "message": "No channels"
+  },
+  "f_duration": {
+    "message": "Duration"
+  },
+  "f_durationMin": {
+    "message": "Duration from, minutes"
+  },
+  "f_durationMax": {
+    "message": "Duration up to, minutes"
+  },
+  "from": {
+    "message": "from"
+  },
+  "to": {
+    "message": "to"
+  },
+  "minutes": {
+    "message": "min"
+  },
+  "f_position": {
+    "message": "Everything except the first in the list:"
+  },
+  "f_positionKeep": {
+    "message": "How many first videos to keep"
+  },
+  "f_keyword": {
+    "message": "Title contains"
+  },
+  "keywordPlaceholder": {
+    "message": "words, comma separated"
+  },
+  "modeLabel": {
+    "message": "Conditions:"
+  },
+  "modeAll": {
+    "message": "all of them"
+  },
+  "modeAny": {
+    "message": "any of them"
+  },
+  "selectedN": {
+    "message": "Selected: $1 of $2"
+  },
+  "onlySelected": {
+    "message": "selected only"
+  },
+  "previewLabel": {
+    "message": "Video list"
+  },
+  "selectRow": {
+    "message": "Select: $1"
+  },
+  "tagUnavailable": {
+    "message": "unavailable"
+  },
+  "tagWatched": {
+    "message": "$1%"
+  },
+  "manualHint": {
+    "message": "Checkboxes in the list add or exclude single videos on top of the filters."
+  },
+  "actionsTitle": {
+    "message": "Removal"
+  },
+  "removeN": {
+    "message": "Remove $1"
+  },
+  "removeNone": {
+    "message": "Remove"
+  },
+  "dryRun": {
+    "message": "Dry run"
+  },
+  "dryRunHint": {
+    "message": "Go through every step without a single request to YouTube"
+  },
+  "speedLabel": {
+    "message": "Speed"
+  },
+  "speed_careful": {
+    "message": "Careful"
+  },
+  "speed_normal": {
+    "message": "Normal"
+  },
+  "speedExplain": {
+    "message": "\"Careful\" — 10 videos every ~3 seconds, \"Normal\" — 25 every ~1.5 seconds. The first request always carries one video; pauses grow after errors and \"too many requests\"."
+  },
+  "safetyNote": {
+    "message": "A backup of the whole list (JSON) is downloaded before removal. Videos are removed in small batches with pauses; you can pause, cancel and continue after a reload."
+  },
+  "exportJson": {
+    "message": "Download JSON backup"
+  },
+  "exportCsv": {
+    "message": "Download CSV table"
+  },
+  "confirmRemoveTitle": {
+    "message": "Remove $1 videos from Watch Later?"
+  },
+  "confirmRemoveBackup": {
+    "message": "A backup of the whole list (JSON) is downloaded first — you can re-add videos from it."
+  },
+  "confirmRemoveSpeed": {
+    "message": "Speed: $1, about $2."
+  },
+  "confirmRemoveKeepOpen": {
+    "message": "Keep this tab open while it runs (if you close it, you can continue later)."
+  },
+  "andMore": {
+    "message": "…and $1 more"
+  },
+  "cancel": {
+    "message": "Cancel"
+  },
+  "backupSaved": {
+    "message": "Backup: $1"
+  },
+  "etaSeconds": {
+    "message": "$1 s"
+  },
+  "etaMinutes": {
+    "message": "$1 min"
+  },
+  "jobRemoveTitle": {
+    "message": "Removing from Watch Later"
+  },
+  "jobRestoreTitle": {
+    "message": "Restoring from a backup"
+  },
+  "jobDryTitle": {
+    "message": "Dry run — nothing is removed"
+  },
+  "jobProgress": {
+    "message": "Processed $1 of $2 · succeeded $3 · skipped $4"
+  },
+  "jobRunning": {
+    "message": "Running… about $1 left."
+  },
+  "jobPaused": {
+    "message": "Paused. Continue now or after reloading the page."
+  },
+  "jobDone": {
+    "message": "Done: $1 videos removed. Reload the page to see the updated list."
+  },
+  "jobRestoreDone": {
+    "message": "Done: $1 videos re-added."
+  },
+  "jobDryDone": {
+    "message": "Dry run finished: $1 videos would be removed in $2 requests. Not a single request was sent to YouTube."
+  },
+  "jobCancelled": {
+    "message": "Cancelled. Removed $1, $2 left untouched."
+  },
+  "jobErr_auth": {
+    "message": "YouTube rejected the request (not signed in or the session expired). Reload the page and continue."
+  },
+  "jobErr_rate": {
+    "message": "YouTube asks to slow down (\"too many requests\"). Paused — continue in a few minutes."
+  },
+  "jobErr_network": {
+    "message": "Several requests in a row failed (no network or a YouTube error). Paused."
+  },
+  "jobBackup": {
+    "message": "Backup: $1"
+  },
+  "jobFailedList": {
+    "message": "$1 skipped (YouTube did not accept them — e.g. already removed):"
+  },
+  "pause": {
+    "message": "Pause"
+  },
+  "resume": {
+    "message": "Continue"
+  },
+  "cancelJob": {
+    "message": "Cancel"
+  },
+  "backToList": {
+    "message": "Back to the list"
+  },
+  "reloadPage": {
+    "message": "Reload the page"
+  },
+  "reloadList": {
+    "message": "Reload the list"
+  },
+  "dryLogLine": {
+    "message": "request $1: $2 videos (not sent)"
+  },
+  "logProblem": {
+    "message": "request $1: $2 → $3"
+  },
+  "queueSection": {
+    "message": "To the queue"
+  },
+  "queueSectionHint": {
+    "message": "Instead of removing the selected videos you can watch them in a row: they go to the end of the queue."
+  },
+  "enqueueOrder": {
+    "message": "In order"
+  },
+  "enqueueShuffle": {
+    "message": "Shuffled"
+  },
+  "enqueueReverse": {
+    "message": "From the bottom"
+  },
+  "queuePlay": {
+    "message": "Start ▶"
+  },
+  "queueNothing": {
+    "message": "No available videos selected"
+  },
+  "queueAddedMany": {
+    "message": "$1 added, $2 in the queue"
+  },
+  "restoreSection": {
+    "message": "Restore from a backup"
+  },
+  "restoreExplain": {
+    "message": "Videos marked as removed in the backup are added back. Order and \"date added\" will differ; unavailable videos cannot be re-added."
+  },
+  "restoreFromFile": {
+    "message": "Choose a backup file…"
+  },
+  "restoreStored": {
+    "message": "Backup of $1 ($2 removed)"
+  },
+  "noStoredBackups": {
+    "message": "No backups yet."
+  },
+  "restoreTitle": {
+    "message": "Re-add $1 videos to Watch Later?"
+  },
+  "restoreFrom": {
+    "message": "Source: $1"
+  },
+  "restoreCaveat": {
+    "message": "Order and date added will differ; unavailable videos are skipped."
+  },
+  "restoreSkipPresent": {
+    "message": "Videos already in the loaded list are skipped."
+  },
+  "restoreNotLoaded": {
+    "message": "The list is not loaded, so YouTube will simply skip videos that are already there."
+  },
+  "restoreN": {
+    "message": "Re-add $1"
+  },
+  "restoreNothing": {
+    "message": "The backup has no videos that can be re-added."
+  },
+  "restoreBadFile": {
+    "message": "This is not a backup made by this extension (JSON or CSV expected)."
+  },
+  "queueSettings": {
+    "message": "\"Play next\" queue"
+  },
+  "opt_hoverButtons": {
+    "message": "Buttons on thumbnails"
+  },
+  "optDesc_hoverButtons": {
+    "message": "\"Play next\" and \"Add to queue\" when you hover a thumbnail"
+  },
+  "opt_autoAdvance": {
+    "message": "Advance to the next queued video"
+  },
+  "optDesc_autoAdvance": {
+    "message": "When a video ends, open the next one from the queue — even with autoplay off"
+  },
+  "opt_queuePanel": {
+    "message": "Queue panel on the watch page"
+  },
+  "optDesc_queuePanel": {
+    "message": "Reorder (drag or arrows), remove and \"Next\" at hand"
+  },
+  "changeShortcut": {
+    "message": "Change shortcut"
+  },
+  "opt_watchedPct": {
+    "message": "Count as watched from, %"
+  },
+  "storedBackups": {
+    "message": "Backups kept in the extension"
+  },
+  "storedBackupsExplain": {
+    "message": "A JSON file is downloaded before every removal; the last three backups are also kept here (on this computer only)."
+  },
+  "backupLine": {
+    "message": "$1 — $2 videos, $3 chosen for removal"
+  },
+  "deleteBackups": {
+    "message": "Delete backups"
+  },
+  "deleteBackupsConfirm": {
+    "message": "Delete the backups kept in the extension? Downloaded files stay."
+  },
+  "deleteJob": {
+    "message": "Forget the unfinished removal"
+  },
+  "jobForgotten": {
+    "message": "Unfinished removal forgotten."
+  },
+  "sectionAbout": {
+    "message": "About"
+  },
+  "aboutText": {
+    "message": "Free, no account, no ads, no analytics. Open source."
+  },
+  "aboutRequests": {
+    "message": "The extension talks to no server except YouTube itself: the list and removals use the same requests the Watch Later page makes, in your tab."
+  },
+  "privacyLink": {
+    "message": "Privacy policy"
+  },
+  "resetAll": {
+    "message": "Reset settings"
+  },
+  "resetDone": {
+    "message": "Settings reset."
+  },
+  "saved": {
+    "message": "Saved"
+  },
+  "version": {
+    "message": "Version"
+  }
+}

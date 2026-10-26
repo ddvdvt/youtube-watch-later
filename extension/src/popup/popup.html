@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Смотреть позже — чистка и очередь</title>
+  <link rel="stylesheet" href="../shared/ui.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="top">
+    <img src="../../icons/icon32.png" alt="" width="20" height="20">
+    <span data-i18n="actionTitle">Смотреть позже — чистка и очередь</span>
+  </header>
+
+  <main>
+    <section aria-labelledby="qTitle">
+      <div class="row">
+        <h2 class="section-title" id="qTitle"><span data-i18n="queueTitle">Очередь</span> <span id="qCount" class="badge">0</span></h2>
+        <button type="button" id="qNext" class="btn small primary" data-i18n="nextNow">Следующее</button>
+      </div>
+      <ol id="qList" class="qlist" aria-labelledby="qTitle"></ol>
+      <p id="qEmpty" class="muted empty" data-i18n="popupQueueEmpty">Очередь пуста.</p>
+      <div class="row">
+        <small class="muted" id="shortcut"></small>
+        <button type="button" id="qClear" class="btn small danger" data-i18n="clear">Очистить</button>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="wlTitle">
+      <h2 class="section-title" id="wlTitle" data-i18n="wlSection">Смотреть позже</h2>
+      <p class="muted" data-i18n="popupWlText">Загрузить весь список, отфильтровать и удалить лишнее — с резервной копией.</p>
+      <p id="jobState" class="hidden" aria-live="polite"></p>
+      <button type="button" id="openWl" class="btn primary" data-i18n="openWl">Открыть очистку списка</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#" id="settings" data-i18n="settings">Настройки</a>
+    <a href="#" data-brand-link="other" target="_blank" rel="noopener" data-i18n="otherExtensions">Другие расширения автора</a>
+  </footer>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

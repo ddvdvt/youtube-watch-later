@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Настройки — Смотреть позже</title>
+  <link rel="stylesheet" href="../shared/ui.css">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <img src="../../icons/icon48.png" alt="" width="32" height="32">
+      <h1 data-i18n="extName">Смотреть позже — чистка и очередь</h1>
+    </header>
+
+    <section class="card">
+      <h2 data-i18n="queueSettings">Очередь «Воспроизвести далее»</h2>
+      <label class="switch-row"><span><span data-i18n="opt_hoverButtons">Кнопки на превью</span><small data-i18n="optDesc_hoverButtons">«Далее» и «В очередь» при наведении на превью видео</small></span><input type="checkbox" class="switch" id="hoverButtons"></label>
+      <label class="switch-row"><span><span data-i18n="opt_autoAdvance">Переходить к следующему из очереди</span><small data-i18n="optDesc_autoAdvance">Когда видео закончилось, открыть следующее из очереди</small></span><input type="checkbox" class="switch" id="autoAdvance"></label>
+      <label class="switch-row"><span><span data-i18n="opt_queuePanel">Панель очереди на странице видео</span><small data-i18n="optDesc_queuePanel">Порядок, удаление и «Следующее» под рукой</small></span><input type="checkbox" class="switch" id="queuePanel"></label>
+      <p class="muted"><span id="shortcut"></span> <a href="#" id="shortcuts" data-i18n="changeShortcut">Изменить сочетание</a></p>
+      <h3 data-i18n="queueTitle">Очередь</h3>
+      <ol id="qList" class="qlist"></ol>
+      <p id="qEmpty" class="muted" data-i18n="popupQueueEmpty">Очередь пуста.</p>
+      <button type="button" id="qClear" class="btn small danger" data-i18n="clear">Очистить</button>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="wlSection">Смотреть позже</h2>
+      <div class="field"><label for="watchedPct" data-i18n="opt_watchedPct">Считать просмотренным от, %</label><input type="number" id="watchedPct" min="1" max="100"></div>
+      <div class="field"><label for="speed" data-i18n="speedLabel">Скорость удаления</label>
+        <select id="speed"><option value="careful" data-i18n="speed_careful">Бережно</option><option value="normal" data-i18n="speed_normal">Обычно</option></select></div>
+      <p class="muted" data-i18n="speedExplain">Первый запрос всегда с одним видео.</p>
+      <h3 data-i18n="storedBackups">Резервные копии в расширении</h3>
+      <p class="muted" data-i18n="storedBackupsExplain">Перед каждым удалением скачивается файл JSON, а последние три копии хранятся ещё и здесь.</p>
+      <ul id="backups" class="backups"></ul>
+      <p id="noBackups" class="muted hidden" data-i18n="noStoredBackups">Резервных копий пока нет.</p>
+      <div class="actions">
+        <button type="button" id="delBackups" class="btn small danger" data-i18n="deleteBackups">Удалить копии</button>
+        <button type="button" id="delJob" class="btn small" data-i18n="deleteJob">Забыть незавершённое удаление</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="sectionAbout">О расширении</h2>
+      <p data-i18n="aboutText">Бесплатно, без аккаунта, без рекламы и аналитики.</p>
+      <p class="muted" data-i18n="aboutRequests">Расширение не обращается ни к каким серверам, кроме самого YouTube.</p>
+      <p><a href="#" data-brand-link="privacy" target="_blank" rel="noopener" data-i18n="privacyLink">Политика конфиденциальности</a></p>
+      <button type="button" id="reset" class="btn small" data-i18n="resetAll">Сбросить настройки</button>
+      <span id="saved" class="muted" aria-live="polite"></span>
+    </section>
+  </div>
+  <footer class="footer wrap">
+    <span id="version" data-i18n="version">Версия</span>
+    <a href="#" data-brand-link="other" target="_blank" rel="noopener" data-i18n="otherExtensions">Другие расширения автора</a>
+  </footer>
+  <script type="module" src="options.js"></script>
+</body>
+</html>

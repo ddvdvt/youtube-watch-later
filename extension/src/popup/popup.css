@@ -1,0 +1,19 @@
+body { width: 340px; }
+.top { display: flex; align-items: center; gap: 8px; padding: 10px 12px; font-weight: 600; border-bottom: 1px solid var(--border); }
+main { padding: 10px 12px; display: grid; gap: 12px; }
+.section-title { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--fg-muted); margin: 0; display: flex; align-items: center; gap: 6px; }
+.row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.badge { display: inline-block; min-width: 20px; padding: 0 6px; border-radius: 10px; background: var(--accent); color: var(--accent-fg); font-size: 11px; text-align: center; letter-spacing: 0; }
+.qlist { list-style: none; margin: 6px 0; padding: 0; max-height: 260px; overflow: auto; border: 1px solid var(--border); border-radius: var(--radius); }
+.qlist:empty { display: none; }
+.qlist li { display: flex; align-items: center; gap: 6px; padding: 5px 6px 5px 8px; border-bottom: 1px solid var(--border); }
+.qlist li:last-child { border-bottom: 0; }
+.qlist .n { color: var(--fg-muted); font-size: 11px; width: 18px; text-align: right; flex: none; }
+.qlist .txt { flex: 1; min-width: 0; }
+.qlist .txt span { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.qlist .txt small { display: block; color: var(--fg-muted); font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.qlist button { border: 0; background: transparent; width: 22px; height: 22px; border-radius: 50%; cursor: pointer; color: var(--fg-muted); padding: 0; }
+.qlist button:hover { background: var(--bg-soft); color: var(--fg); }
+.qlist button:disabled { opacity: .3; cursor: default; }
+.empty { margin: 6px 0; }
+.card p { margin: 6px 0; }

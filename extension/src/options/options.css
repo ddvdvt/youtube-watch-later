@@ -1,0 +1,25 @@
+body { font-size: 14px; background: var(--bg-soft); }
+.wrap { max-width: 720px; margin: 0 auto; padding: 16px; display: grid; gap: 14px; }
+.top { display: flex; align-items: center; gap: 12px; }
+.top h1 { font-size: 20px; margin: 0; }
+.card { background: var(--bg); padding: 14px 18px; }
+.card h2 { font-size: 16px; margin: 0 0 8px; }
+.card h3 { font-size: 13px; margin: 14px 0 6px; color: var(--fg-muted); text-transform: uppercase; letter-spacing: .04em; }
+.field { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 6px 0; }
+.field input, .field select { width: 160px; }
+.actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+.qlist { list-style: none; margin: 6px 0; padding: 0; max-height: 320px; overflow: auto; border: 1px solid var(--border); border-radius: var(--radius); }
+.qlist:empty { display: none; }
+.qlist li { display: flex; align-items: center; gap: 6px; padding: 5px 8px; border-bottom: 1px solid var(--border); }
+.qlist li:last-child { border-bottom: 0; }
+.qlist .n { color: var(--fg-muted); font-size: 12px; width: 26px; text-align: right; }
+.qlist .txt { flex: 1; min-width: 0; }
+.qlist .txt span, .qlist .txt small { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.qlist .txt small { color: var(--fg-muted); font-size: 12px; }
+.qlist button { border: 0; background: transparent; width: 24px; height: 24px; border-radius: 50%; cursor: pointer; color: var(--fg-muted); }
+.qlist button:hover { background: var(--bg-soft); color: var(--fg); }
+.qlist button:disabled { opacity: .3; cursor: default; }
+.backups { margin: 6px 0; padding-left: 18px; }
+.backups li { margin: 4px 0; }
+.backups button { margin-left: 6px; }
+.footer.wrap { border: 0; padding-top: 0; }
