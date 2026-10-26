@@ -1,0 +1,7 @@
+node_modules/
+dist/
+*.zip
+e2e/.profile*/
+.DS_Store
+Thumbs.db
+keys/
