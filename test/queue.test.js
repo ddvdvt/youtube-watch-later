@@ -63,3 +63,15 @@ test('settings', () => {
   assert.deepEqual(pushBackup([{ createdAt: 'b' }, { createdAt: 'c' }, { createdAt: 'd' }], { createdAt: 'a' }).map((b) => b.createdAt), ['a', 'b', 'c']);
   assert.deepEqual(pushBackup(undefined, { createdAt: 'a' }), [{ createdAt: 'a' }]);
 });
+
+test('host matching for the tab checks', async () => {
+  const { onHost } = await import('../extension/lib/hosts.js');
+  const P = ['https://www.youtube.com/*'];
+  assert.ok(onHost('https://www.youtube.com/watch?v=x', P));
+  assert.ok(!onHost('http://www.youtube.com/', P));
+  assert.ok(!onHost('https://m.youtube.com/', P));
+  assert.ok(!onHost('https://www.youtube.com.evil.example/', P));
+  assert.ok(!onHost(undefined, P));
+  assert.ok(!onHost('chrome://extensions', P));
+  assert.ok(onHost('http://127.0.0.1:5000/x', [...P, 'http://127.0.0.1/*']));
+});

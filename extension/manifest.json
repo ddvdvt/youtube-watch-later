@@ -39,7 +39,7 @@
   "commands": {
     "next-in-queue": {
       "suggested_key": {
-        "default": "Alt+Shift+N"
+        "default": "Alt+Shift+Q"
       },
       "description": "__MSG_cmdNext__"
     }

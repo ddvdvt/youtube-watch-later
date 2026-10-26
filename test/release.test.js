@@ -75,7 +75,7 @@ test('manifest: CWS fields', () => {
     assert.equal(png.readUInt32BE(20), Number(size), `icon ${size} height`);
   }
   const cmd = manifest.commands['next-in-queue'];
-  assert.equal(cmd.suggested_key.default, 'Alt+Shift+N');
+  assert.equal(cmd.suggested_key.default, 'Alt+Shift+Q');
 });
 
 test('manifest: every permission is used by the code, host access only to www.youtube.com', () => {

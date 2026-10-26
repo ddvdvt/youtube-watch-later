@@ -6,6 +6,9 @@ import { normalizeSettings } from '../lib/settings.js';
 import { applyOp, normalizeQueue, isValidOp, watchUrl } from '../lib/queue.js';
 import { videoIdFromUrl } from '../lib/wl-parse.js';
 import { brandUrls, welcomeUrlFor } from '../lib/brand.js';
+import { onHost } from '../lib/hosts.js';
+
+const HOSTS = chrome.runtime.getManifest().host_permissions || [];
 
 const MENU_NEXT = 'ywl-play-next';
 const MENU_END = 'ywl-add-end';
@@ -42,7 +45,7 @@ function queueOp(op) {
 /** YouTube tab to act on: the active tab if it is YouTube. */
 async function activeYoutubeTab() {
   const [tab] = await chrome.tabs.query({ active: true, lastFocusedWindow: true });
-  return tab && tab.id != null && /^https:\/\/www\.youtube\.com\//.test(tab.url || '') ? tab : null;
+  return tab && tab.id != null && onHost(tab.url, HOSTS) ? tab : null;
 }
 
 /** Play the next queued video: in the YouTube tab (inside the app, no reload) or a new tab. */

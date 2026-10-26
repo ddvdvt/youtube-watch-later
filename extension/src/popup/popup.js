@@ -2,6 +2,7 @@ import { applyI18n, t } from '../shared/i18n.js';
 import { wireBrandLinks } from '../shared/brand-link.js';
 import { normalizeQueue } from '../../lib/queue.js';
 import { renderQueue, queueOp } from '../shared/queue-view.js';
+import { onHost } from '../../lib/hosts.js';
 
 const WL_URL = 'https://www.youtube.com/playlist?list=WL';
 const $ = (id) => /** @type {HTMLElement} */ (document.getElementById(id));
@@ -14,7 +15,7 @@ async function targetTab() {
   return tab || null;
 }
 
-const isYoutube = (tab) => !!tab && /^https:\/\/www\.youtube\.com\//.test(tab.url || '');
+const isYoutube = (tab) => !!tab && onHost(tab.url, chrome.runtime.getManifest().host_permissions || []);
 
 function paint(queue) {
   renderQueue(/** @type {HTMLOListElement} */ ($('qList')), queue);
@@ -65,7 +66,7 @@ async function init() {
     if (onWl && tab && tab.id != null) {
       await chrome.tabs.sendMessage(tab.id, { type: 'wl:open' }).catch(() => null);
     } else if (isYoutube(tab) && tab.id != null) {
-      await chrome.tabs.update(tab.id, { url: WL_URL });
+      await chrome.tabs.update(tab.id, { url: new URL('/playlist?list=WL', tab.url).href });
     } else {
       await chrome.tabs.create({ url: WL_URL });
     }

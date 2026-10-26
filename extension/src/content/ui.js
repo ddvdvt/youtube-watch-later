@@ -74,6 +74,8 @@ export function downloadText(name, text, type) {
   a.href = url;
   a.download = name;
   a.style.display = 'none';
+  // keep the page's own link handling (single-page app router) away from this click
+  a.addEventListener('click', (e) => e.stopPropagation());
   (document.body || document.documentElement).append(a);
   a.click();
   a.remove();
